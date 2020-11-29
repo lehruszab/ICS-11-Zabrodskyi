@@ -31,7 +31,7 @@ def show_dovidnik(dovidnik):
 
     for cod in dovidnik:
         if dovidnik_code_from <= cod[0] <= dovidnik_code_to:
-            print("Код: {:8} Назва: {:20} Торгова скидка: {:4}".format(cod[0], cod[1], cod[2]))
+            print("Код: {:8} Назва:{:20} Торгова скидка:{:4}".format(cod[0], cod[1], cod[2].rstrip()))
             kol_lines = kol_lines + 1
 
     if kol_lines == 0:
@@ -45,7 +45,7 @@ def show_tovaroobig(tovaroobig):
 
     for cod in tovaroobig:
         if tovaroobig_code_from <= cod[0] <= tovaroobig_code_to:
-            print("Код: {:7} План: {:8} Очікуємо виконання: {:8} Рік: {:6}".format(cod[0], cod[1], cod[2], cod[3]))
+            print("Код:{:7} План:{:8} Очікуємо виконання:{:8} Рік:{:6}".format(cod[0], cod[1], cod[2], cod[3].rstrip()))
             kol_lines = kol_lines + 1
 
     if kol_lines == 0:
@@ -53,12 +53,12 @@ def show_tovaroobig(tovaroobig):
 
 
 
-what_show = int(input("Показати: 1 - довідник; 2 - товарообіг? (1/2)"))
-if what_show == 1:
-    dovidnik = get_dovidnik()
-    show_dovidnik(dovidnik)   
-elif what_show == 2:
-    tovaroobig = get_tovaroobig()
-    show_tovaroobig(tovaroobig)
-else:
-    print("Введіть '1' або '2'!")  
+# what_show = int(input("Показати: 1 - довідник; 2 - товарообіг? (1/2)"))
+# if what_show == 1:
+#dovidnik = get_dovidnik()
+#show_dovidnik(dovidnik)   
+# elif what_show == 2:
+#tovaroobig = get_tovaroobig()
+#show_tovaroobig(tovaroobig)
+# else:
+#    print("Введіть '1' або '2'!")  
